@@ -1,4 +1,5 @@
-import{ Pool } from 'pg';
+// db.js
+import { Pool } from 'pg';
 
 const pool = new Pool({
   user: 'neondb_owner',
@@ -6,6 +7,16 @@ const pool = new Pool({
   database: 'neondb',
   password: 'npg_WUmQdXwNZ2f6',
   ssl: { rejectUnauthorized: false },
+});
+
+// Verificar conexión
+pool.on('connect', () => {
+  console.log('✓ Conectado a PostgreSQL');
+});
+
+pool.on('error', (err) => {
+  console.error('Error inesperado en el cliente de PostgreSQL', err);
+  process.exit(-1);
 });
 
 export default pool;

@@ -1,0 +1,106 @@
+# ==========================
+# 🧠 GENERAL
+# ==========================
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Dependencias
+node_modules/
+**/node_modules/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Compilaciones y builds
+dist/
+build/
+.cache/
+.next/
+out/
+coverage/
+
+# Archivos temporales
+*.tmp
+*.swp
+*.swo
+*.bak
+*.old
+
+# ==========================
+# ⚙️ ENVIRONMENTS / CONFIG
+# ==========================
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+*.env
+
+# Archivos sensibles
+config.js
+config/*.js
+secrets/
+private_keys/
+database.json
+
+# ==========================
+# 🖥️ FRONTEND (React)
+# ==========================
+# Dependencias
+frontend/node_modules/
+# Builds
+frontend/build/
+frontend/dist/
+# Cache de herramientas
+frontend/.cache/
+# Archivos de lock opcionales
+frontend/package-lock.json
+frontend/yarn.lock
+
+# ==========================
+# ⚙️ BACKEND (Node + Express)
+# ==========================
+backend/node_modules/
+backend/dist/
+backend/logs/
+backend/tmp/
+# Archivos sensibles
+backend/.env
+backend/.env.*
+# Archivos de lock opcionales
+backend/package-lock.json
+backend/yarn.lock
+
+# ==========================
+# 🐘 PostgreSQL
+# ==========================
+# Archivos de base de datos o dumps locales
+*.sql
+*.sqlite
+*.db
+*.pgdata
+pgdata/
+database_backups/
+
+# ==========================
+# 🧩 IDE / EDITOR
+# ==========================
+.vscode/
+.idea/
+*.iml
+
+# ==========================
+# 🧪 TEST / TEMP
+# ==========================
+coverage/
+jest-coverage/
+__pycache__/
+__tests__/temp/
+*.spec.js
+*.test.js
