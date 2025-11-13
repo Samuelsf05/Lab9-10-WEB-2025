@@ -9,7 +9,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await API.post("/signin", { email, password });
+      const response = await API.post("/auth/signin", { email, password });
       localStorage.setItem("token", response.data.token);
       alert("Login successful!");
     } catch (err) {

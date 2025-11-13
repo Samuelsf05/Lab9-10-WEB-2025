@@ -1,9 +1,10 @@
-// app.js
 import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
 import userRoutes from "./routes/userRoutes.js";
 import authRoutes from "./routes/authRoutes.js";
+import customerRoutes from "./routes/customerRoutes.js";
+import salesRoutes from "./routes/salesRoutes.js";
 
 const app = express();
 
@@ -19,6 +20,8 @@ app.get('/', (req, res) => {
 // Registro de rutas
 app.use('/users', userRoutes);
 app.use('/auth', authRoutes);
+app.use('/api/customers', customerRoutes);
+app.use('/api/sales', salesRoutes);
 
 // Ruta protegida de ejemplo
 import { verifyToken } from "./middleware/auth.js";

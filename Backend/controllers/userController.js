@@ -1,4 +1,3 @@
-// controllers/userController.js
 import pool from "../db.js";
 import bcrypt from "bcrypt";
 import { config } from "../config/config.js";
